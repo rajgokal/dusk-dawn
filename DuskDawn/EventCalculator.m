@@ -16,7 +16,7 @@
 //  Released to the public domain by Paul Schlyter, December 1992
 //
 
-#import "EDSunriseSet.h"
+#import "EventCalculator.h"
 
 //
 // Defines from sunriset.c
@@ -51,7 +51,7 @@
 
 
 #pragma mark - Readwrite accessors only private
-@interface EDSunriseSet()
+@interface EventCalculator()
 
 @property (nonatomic) double  latitude;
 @property (nonatomic) double  longitude;
@@ -81,7 +81,7 @@
 @end
 
 #pragma mark - Calculations from sunriset.c
-@implementation EDSunriseSet(Calculations)
+@implementation EventCalculator(Calculations)
 
 /*****************************************/
 /* Reduce angle to within 0..360 degrees */
@@ -307,7 +307,7 @@ __sunriset__( year, month, day, lon, lat, -35.0/60.0, 1, rise, set )
 
 #pragma mark - Private Implementation
 
-@implementation EDSunriseSet(Private)
+@implementation EventCalculator(Private)
 
 static const int kSecondsInHour= 60.0*60.0;
 
@@ -415,11 +415,11 @@ static const int kSecondsInHour= 60.0*60.0;
 
 #pragma mark - Public Implementation
 
-@implementation EDSunriseSet
+@implementation EventCalculator
 
 #pragma mark - Initialization
 
--(EDSunriseSet*)initWithDate:(NSDate*)date timezone:(NSTimeZone*)tz latitude:(double)latitude longitude:(double)longitude {
+-(EventCalculator*)initWithDate:(NSDate*)date timezone:(NSTimeZone*)tz latitude:(double)latitude longitude:(double)longitude {
     self = [super init];
     if( self )
     {
@@ -437,8 +437,8 @@ static const int kSecondsInHour= 60.0*60.0;
     return self;
 }
 
-+(EDSunriseSet*)sunrisesetWithDate:(NSDate*)date timezone:(NSTimeZone*)tz latitude:(double)latitude longitude:(double)longitude {
-    return [[EDSunriseSet alloc] initWithDate:date timezone:tz latitude:latitude longitude:longitude];
++(EventCalculator*)sunrisesetWithDate:(NSDate*)date timezone:(NSTimeZone*)tz latitude:(double)latitude longitude:(double)longitude {
+    return [[EventCalculator alloc] initWithDate:date timezone:tz latitude:latitude longitude:longitude];
 }
 
 @end

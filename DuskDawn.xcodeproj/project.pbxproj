@@ -16,7 +16,7 @@
 		3503896B1C38A470007EABD8 /* DuskDawnUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503896A1C38A470007EABD8 /* DuskDawnUITests.swift */; };
 		3503897E1C38A5E1007EABD8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3503897C1C38A5E1007EABD8 /* HomeViewController.swift */; };
 		350389811C38A6C5007EABD8 /* TimeOfEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350389801C38A6C5007EABD8 /* TimeOfEvent.swift */; };
-		350389851C38A98D007EABD8 /* EDSunriseSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 350389841C38A98D007EABD8 /* EDSunriseSet.m */; };
+		350389851C38A98D007EABD8 /* EventCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 350389841C38A98D007EABD8 /* EventCalculator.m */; };
 		350389871C38BE1F007EABD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350389861C38BE1F007EABD8 /* Main.storyboard */; };
 		3503898B1C38D3A5007EABD8 /* DuskDawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3503898A1C38D3A5007EABD8 /* DuskDawn.png */; };
 /* End PBXBuildFile section */
@@ -55,8 +55,8 @@
 		3503897C1C38A5E1007EABD8 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = ../HomeViewController.swift; sourceTree = "<group>"; };
 		350389801C38A6C5007EABD8 /* TimeOfEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeOfEvent.swift; sourceTree = "<group>"; };
 		350389821C38A98C007EABD8 /* DuskDawn-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DuskDawn-Bridging-Header.h"; sourceTree = "<group>"; };
-		350389831C38A98D007EABD8 /* EDSunriseSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSunriseSet.h; sourceTree = "<group>"; };
-		350389841C38A98D007EABD8 /* EDSunriseSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSunriseSet.m; sourceTree = "<group>"; };
+		350389831C38A98D007EABD8 /* EventCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventCalculator.h; sourceTree = "<group>"; };
+		350389841C38A98D007EABD8 /* EventCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventCalculator.m; sourceTree = "<group>"; };
 		350389861C38BE1F007EABD8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3503898A1C38D3A5007EABD8 /* DuskDawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DuskDawn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,14 +110,13 @@
 		350389461C38A470007EABD8 /* DuskDawn */ = {
 			isa = PBXGroup;
 			children = (
-				3503897C1C38A5E1007EABD8 /* HomeViewController.swift */,
 				350389471C38A470007EABD8 /* AppDelegate.swift */,
+				3503897C1C38A5E1007EABD8 /* HomeViewController.swift */,
 				350389801C38A6C5007EABD8 /* TimeOfEvent.swift */,
-				350389491C38A470007EABD8 /* ViewController.swift */,
-				350389831C38A98D007EABD8 /* EDSunriseSet.h */,
-				350389841C38A98D007EABD8 /* EDSunriseSet.m */,
+				350389831C38A98D007EABD8 /* EventCalculator.h */,
+				350389841C38A98D007EABD8 /* EventCalculator.m */,
 				350389511C38A470007EABD8 /* Assets.xcassets */,
-				350389531C38A470007EABD8 /* LaunchScreen.storyboard */,
+				3503898C1C38D872007EABD8 /* Launch */,
 				350389861C38BE1F007EABD8 /* Main.storyboard */,
 				350389561C38A470007EABD8 /* Info.plist */,
 				3503894E1C38A470007EABD8 /* DuskDawn.xcdatamodeld */,
@@ -142,6 +141,15 @@
 				3503896C1C38A470007EABD8 /* Info.plist */,
 			);
 			path = DuskDawnUITests;
+			sourceTree = "<group>";
+		};
+		3503898C1C38D872007EABD8 /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				350389531C38A470007EABD8 /* LaunchScreen.storyboard */,
+				350389491C38A470007EABD8 /* ViewController.swift */,
+			);
+			name = Launch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3503894A1C38A470007EABD8 /* ViewController.swift in Sources */,
-				350389851C38A98D007EABD8 /* EDSunriseSet.m in Sources */,
+				350389851C38A98D007EABD8 /* EventCalculator.m in Sources */,
 				350389811C38A6C5007EABD8 /* TimeOfEvent.swift in Sources */,
 				350389501C38A470007EABD8 /* DuskDawn.xcdatamodeld in Sources */,
 				350389481C38A470007EABD8 /* AppDelegate.swift in Sources */,

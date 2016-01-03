@@ -22,7 +22,7 @@
 #error This file must be compiled with ARC. Either turn on ARC for the project or use -fobjc-arc flag in this file.
 #endif
 
-@interface EDSunriseSet : NSObject
+@interface EventCalculator : NSObject
 
 @property (readonly, strong) NSDate *date;
 @property (readonly, strong) NSDate *sunset;

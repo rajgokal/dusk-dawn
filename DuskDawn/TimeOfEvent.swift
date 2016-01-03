@@ -11,11 +11,11 @@ import Foundation
 
 public class TimeOfEvent {
     
-    var timeHelper = EDSunriseSet.init(date: NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: 37.785834, longitude: -122.5128)
+    var timeHelper = EventCalculator.init(date: NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: 37.785834, longitude: -122.5128)
     
     public func setLocation (latitude : Double, longitude : Double) {
     
-        timeHelper = EDSunriseSet.sunrisesetWithDate(NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: latitude , longitude: longitude)
+        timeHelper = EventCalculator.sunrisesetWithDate(NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: latitude , longitude: longitude)
         
     }
 
@@ -27,10 +27,28 @@ public class TimeOfEvent {
         }
         
     }
+
+    var nextFirstLight : NSDate {
+        get {
+            let time = timeHelper.nauticalTwilightStart
+            print(time)
+            return time
+        }
+        
+    }
     
     var nextSunrise : NSDate {
         get {
             let time = timeHelper.sunrise
+            print(time)
+            return time
+        }
+        
+    }
+    
+    var nextLastLight : NSDate {
+        get {
+            let time = timeHelper.nauticalTwilightEnd
             print(time)
             return time
         }

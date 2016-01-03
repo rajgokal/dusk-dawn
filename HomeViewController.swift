@@ -13,8 +13,10 @@ class HomeViewController: ViewController {
 
     
     @IBOutlet weak var currentTimeLabel: UILabel!
+    @IBOutlet weak var firstLightLabel: UILabel!
     @IBOutlet weak var sunriseTimeLabel: UILabel!
     @IBOutlet weak var sunsetTimeLabel: UILabel!
+    @IBOutlet weak var lastLightLabel: UILabel!
     
     var timeHelper = TimeOfEvent()
     
@@ -43,6 +45,12 @@ class HomeViewController: ViewController {
         
         dateString = dateFormatter.stringFromDate(timeHelper.nextSunrise)
         sunriseTimeLabel.text = dateString
+        
+        dateString = dateFormatter.stringFromDate(timeHelper.nextFirstLight)
+        firstLightLabel.text = dateString
+        
+        dateString = dateFormatter.stringFromDate(timeHelper.nextLastLight)
+        lastLightLabel.text = dateString
         
         // Do any additional setup after loading the view.
     }
