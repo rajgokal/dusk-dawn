@@ -8,9 +8,16 @@
 
 import Foundation
 
+
 public class TimeOfEvent {
     
-    let timeHelper = EDSunriseSet.init(date: NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: 37.5253, longitude: 122.5128)
+    var timeHelper = EDSunriseSet.init(date: NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: 37.785834, longitude: -122.5128)
+    
+    public func setLocation (latitude : Double, longitude : Double) {
+    
+        timeHelper = EDSunriseSet.sunrisesetWithDate(NSDate(), timezone: NSTimeZone.localTimeZone(), latitude: latitude , longitude: longitude)
+        
+    }
 
     public var currentTime : NSDate {
         get {

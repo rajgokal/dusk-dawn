@@ -18,6 +18,7 @@
 		350389811C38A6C5007EABD8 /* TimeOfEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350389801C38A6C5007EABD8 /* TimeOfEvent.swift */; };
 		350389851C38A98D007EABD8 /* EDSunriseSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 350389841C38A98D007EABD8 /* EDSunriseSet.m */; };
 		350389871C38BE1F007EABD8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 350389861C38BE1F007EABD8 /* Main.storyboard */; };
+		3503898B1C38D3A5007EABD8 /* DuskDawn.png in Resources */ = {isa = PBXBuildFile; fileRef = 3503898A1C38D3A5007EABD8 /* DuskDawn.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		350389831C38A98D007EABD8 /* EDSunriseSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EDSunriseSet.h; sourceTree = "<group>"; };
 		350389841C38A98D007EABD8 /* EDSunriseSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EDSunriseSet.m; sourceTree = "<group>"; };
 		350389861C38BE1F007EABD8 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3503898A1C38D3A5007EABD8 /* DuskDawn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DuskDawn.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				3503895E1C38A470007EABD8 /* DuskDawnTests */,
 				350389691C38A470007EABD8 /* DuskDawnUITests */,
 				350389451C38A470007EABD8 /* Products */,
+				3503898A1C38D3A5007EABD8 /* DuskDawn.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,8 +112,8 @@
 			children = (
 				3503897C1C38A5E1007EABD8 /* HomeViewController.swift */,
 				350389471C38A470007EABD8 /* AppDelegate.swift */,
-				350389491C38A470007EABD8 /* ViewController.swift */,
 				350389801C38A6C5007EABD8 /* TimeOfEvent.swift */,
+				350389491C38A470007EABD8 /* ViewController.swift */,
 				350389831C38A98D007EABD8 /* EDSunriseSet.h */,
 				350389841C38A98D007EABD8 /* EDSunriseSet.m */,
 				350389511C38A470007EABD8 /* Assets.xcassets */,
@@ -246,6 +249,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3503898B1C38D3A5007EABD8 /* DuskDawn.png in Resources */,
 				350389871C38BE1F007EABD8 /* Main.storyboard in Resources */,
 				350389551C38A470007EABD8 /* LaunchScreen.storyboard in Resources */,
 				350389521C38A470007EABD8 /* Assets.xcassets in Resources */,

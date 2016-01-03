@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 class HomeViewController: ViewController {
 
@@ -15,31 +16,49 @@ class HomeViewController: ViewController {
     @IBOutlet weak var sunriseTimeLabel: UILabel!
     @IBOutlet weak var sunsetTimeLabel: UILabel!
     
+    var timeHelper = TimeOfEvent()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        populateTimes()
         
-        // Do any additional setup after loading the view.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    var dateFormatter = NSDateFormatter()
-    
-    var timeHelper = TimeOfEvent.init()
-    
-    func populateTimes() {
+        let locManager = CLLocationManager()
+        var currentLocation = CLLocation!()
+        locManager.requestWhenInUseAuthorization()
         
-        dateFormatter.dateFormat = "hh:mm" //format style. Browse online to get a format that fits your needs.
+        if( CLLocationManager.authorizationStatus() == CLAuthorizationStatus.AuthorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() == CLAuthorizationStatus.Authorized){
+                
+                currentLocation = locManager.location
+                timeHelper.setLocation(currentLocation.coordinate.latitude, longitude:currentLocation.coordinate.longitude)
+                
+        }
+        
+        dateFormatter.dateFormat = "h:mm a" //format style. Browse online to get a format that fits your needs.
         
         var dateString = dateFormatter.stringFromDate(timeHelper.currentTime)
         currentTimeLabel.text = dateString
         
         dateString = dateFormatter.stringFromDate(timeHelper.nextSunset)
         sunsetTimeLabel.text = dateString
+        
+        dateString = dateFormatter.stringFromDate(timeHelper.nextSunrise)
+        sunriseTimeLabel.text = dateString
+        
+        // Do any additional setup after loading the view.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    var dateFormatter = NSDateFormatter()
+    
+    func populateTimes() {
+
+        
+        
     }
 
     /*
